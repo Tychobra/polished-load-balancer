@@ -1,0 +1,10 @@
+{
+    "src": ["./lib/**/*.js",  { "guide": "./README.md" }],
+    "app": {
+        "entrance": "content:guide",
+        "routing": "query",
+        "base": "/node-shiny-proxy",
+        "server": "github"
+    },
+    "dest": "docs"
+}

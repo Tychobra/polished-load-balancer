@@ -1,4 +1,4 @@
-# node-shiny-proxy
+# polished_server
 
 `polished_proxy` is a simple way to deploy R Shiny apps. It sets up a reverse proxy. It relies on the popular [`http-proxy`](https://github.com/http-party/node-http-proxy) and [`http-proxy-middleware`](https://github.com/chimurai/http-proxy-middleware) for proxying. As a pure Node.js solution it is platform-independent.
 

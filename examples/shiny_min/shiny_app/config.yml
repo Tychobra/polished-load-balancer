@@ -1,0 +1,6 @@
+default:
+  app_name: "polished_example_01"
+  api_key: "ybb5sptUuidLW51arHrCmH3bDVoL1XXcGa"
+
+production:
+  api_key: "eOl5hsOcGKOEev1F8OKtMcBtfw7ts5eJm1"

@@ -25,20 +25,10 @@ import express from 'express';
 import ShinyProxy from 'shiny-proxy';
 
 const shinyProxy = new ShinyProxy({
-    portRangeStart: 4000,
-    apps: [
-        {
-            id: 'main-app',
-            path: '/',
-            appDir: 'shiny-apps/main-app'
-        },
-        {
-            id: 'my-app',
-            path: '/my-app',
-            appDir: 'shiny-apps/my-app'
-        }
-    ]
-});
+  appDir: "/srv/shiny-server/shiny_app",
+  maxConnections: 1,
+  maxWorkers: 2
+})
 
 const app = express();
 
@@ -54,8 +44,6 @@ A `shiny-proxy` object is created with `new ShinyProxy(options)`. This section d
 
 #### Main settings
 
-* **options.portRangeStart:** the start of the port range to serve Shiny apps instances on `localhost` (defaults to 4000). Shiny apps instances will be served on available tcp ports starting from there.
-
 * **options.RscriptPath:** the path to `Rscript` executable (by default, `/usr/lib/R/bin/Rscript`).
 
 * **options.redirect404:** the path to redirect "page not found" errors to (by default, `/404`).
@@ -66,13 +54,11 @@ A `shiny-proxy` object is created with `new ShinyProxy(options)`. This section d
 
 #### Apps settings
 
-* **options.apps[i].id:** a unique string identifier for the Shiny app.
+* **options.appDir:** the path of the folder containing the Shiny app (with either `app.R` or `server.R` and `ui.R`).
 
-* **options.apps[i].path:** the path to serve the Shiny app on.
+* **options.maxConnections** the max number of connections per worker before starting up a new worker.
 
-* **options.apps[i].appDir:** the path of the folder containing the Shiny app (with either `app.R` or `server.R` and `ui.R`).
-
-* **options.apps[i].workers:** the number of instances of the app to run (by default 2).
+* **options.maxWorkers:** the max number of instances of the app to run, by default the number of cores on the server.
 
 ## License
 

@@ -2,7 +2,7 @@
 
 # Polished Proxy Installation
 ```terminal
-cd proxy_server
+cd examples/shiny_min/proxy_server
 npm install
 ```
 
@@ -11,4 +11,12 @@ npm install
 ```terminal
 node ./proxy.js
 ```
+
+kill open ports
+
+```terminal
+npx kill-port 8080
+```
+
+
 

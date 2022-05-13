@@ -47,7 +47,3 @@ A `shiny-proxy` object is created with `new ShinyProxy(options)`. This section d
 * **options.maxConnections** the max number of connections per worker before starting up a new worker.
 
 * **options.maxWorkers:** the max number of instances of the app to run, by default the number of cores on the server.
-
-## License
-
-MIT License (MIT)

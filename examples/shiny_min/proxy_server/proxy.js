@@ -11,4 +11,4 @@ const app = express();
 
 app.use(shinyProxy.middleware);
 
-app.listen(3001);
+app.listen(8080);

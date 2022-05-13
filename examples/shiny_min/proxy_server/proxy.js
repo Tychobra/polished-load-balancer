@@ -4,11 +4,11 @@ import ShinyProxy from '../../../index.js';
 const shinyProxy = new ShinyProxy({
   RscriptPath: "R",
   appDir: '../shiny_app',
-  maxConnections: 10
+  maxSessions: 1
 });
 
 const app = express();
 
 app.use(shinyProxy.middleware);
 
-app.listen(8000);
+app.listen(3001);

@@ -1,9 +1,9 @@
 {
-  "name": "shiny-proxy",
+  "name": "polishedproxy",
   "version": "0.1.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/martinv13/node-shiny-proxy.git"
+    "url": "https://github.com/tychobra/polishedproxy.git"
   },
   "type": "module",
   "description": "Simple R Shiny apps deployment",
@@ -11,8 +11,7 @@
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
   },
-  "author": "Martin Vergier",
-  "license": "MIT",
+  "author": "Martin Vergier and Andy Merlino",
   "dependencies": {
     "async-lock": "^1.2.4",
     "http-proxy-middleware": "^1.0.6",

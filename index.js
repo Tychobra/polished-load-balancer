@@ -1,3 +1,3 @@
 
-import ShinyProxy from './lib/proxy.js'; 
-export default ShinyProxy; 
+import PolishedProxy from './lib/proxy.js'; 
+export default PolishedProxy; 

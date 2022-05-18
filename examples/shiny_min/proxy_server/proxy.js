@@ -1,14 +1,14 @@
 import express from 'express';
-import PolishedProxy from '../../../index.js';
+import proxy from '../../../index.js';
 
-const polishedProxy = new PolishedProxy({
+const polishedProxy = proxy({
   RscriptPath: "R",
   appDir: '../shiny_app',
-  maxSessions: 1
+  maxSessions: 5
 });
 
 const app = express();
 
-app.use(polishedProxy.middleware);
+app.use(polishedProxy);
 
 app.listen(8080);

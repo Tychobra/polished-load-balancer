@@ -19,7 +19,9 @@ ui <- fluidPage(
     ),
     column(
       12,
-      verbatimTextOutput("secure_content")
+      verbatimTextOutput("secure_content"),
+      h1("Hello"),
+      DTOutput("my_table")
     )
   )
 )

@@ -1,7 +1,7 @@
 library(shiny)
 library(polished)
 library(config)
-
+library(DT)
 
 app_config <- config::get()
 

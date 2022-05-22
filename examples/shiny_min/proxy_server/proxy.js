@@ -12,3 +12,5 @@ const app = express();
 app.use(polishedProxy.middleware);
 
 app.listen(8080);
+
+//app.on('upgrade', polishedProxy.middleware.upgrade); 

@@ -11,6 +11,12 @@ server <- function(input, output, session) {
    session$reload()
 
   })
+
+  output$my_table <- renderDT({
+    datatable(iris)
+  })
+
+  invisible(NULL)
 }
 
 secure_server(server)

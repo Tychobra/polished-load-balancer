@@ -1,3 +1,3 @@
 
-import PolishedProxy from './lib/proxy.js'; 
-export default PolishedProxy; 
+import polishedProxy from './lib/proxy.js'; 
+export default polishedProxy; 

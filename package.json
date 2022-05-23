@@ -1,9 +1,9 @@
 {
-  "name": "polishedproxy",
-  "version": "0.1.2",
+  "name": "polished-proxy",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tychobra/polishedproxy.git"
+    "url": "https://github.com/tychobra/polished-proxy.git"
   },
   "type": "module",
   "description": "Simple R Shiny apps deployment",

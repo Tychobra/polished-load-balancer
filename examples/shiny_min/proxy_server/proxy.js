@@ -2,7 +2,6 @@ import express from 'express';
 import polishedProxy from '../../../index.js';
 
 const proxyMiddleware = polishedProxy({
-  RscriptPath: "R",
   appDir: '../shiny_app',
   maxSessions: 1
 });

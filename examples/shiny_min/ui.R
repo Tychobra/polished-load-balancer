@@ -1,4 +1,4 @@
-ui <- fluidPage(
+fluidPage(
   fluidRow(
     column(
       6,
@@ -26,4 +26,3 @@ ui <- fluidPage(
   )
 )
 
-ui

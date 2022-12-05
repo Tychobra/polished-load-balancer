@@ -1,12 +1,13 @@
 import express from 'express'
-import polishedProxy from '../../../index.js'
+import polishedProxy from '../../index.js'
 
 const proxyMiddleware = await polishedProxy({
-  appDir: '../shiny_app',
-  maxSessions: 1
+  //appDir: '../shiny_min',
+  appDir: '../shiny_w_polished',
+  maxSessions: 2
 })
 
-//shiny::runApp("../shiny_app")
+
 const app = express()
 
 app.get("/favicon.ico", (req, res) => {

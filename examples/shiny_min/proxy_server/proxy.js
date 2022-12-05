@@ -1,15 +1,20 @@
-import express from 'express';
-import polishedProxy from '../../../index.js';
+import express from 'express'
+import polishedProxy from '../../../index.js'
 
-const proxyMiddleware = polishedProxy({
+const proxyMiddleware = await polishedProxy({
   appDir: '../shiny_app',
   maxSessions: 1
-});
+})
 
-const app = express();
+//shiny::runApp("../shiny_app")
+const app = express()
 
-app.use(proxyMiddleware);
+app.get("/favicon.ico", (req, res) => {
+  res.status(404).json({message: "not found"})
+})
 
-app.listen(8080);
+app.use(proxyMiddleware)
 
-//app.on('upgrade', polishedProxy.middleware.upgrade); 
+app.listen(8080)
+
+//app.on('upgrade', ws_proxy.upgrade) 

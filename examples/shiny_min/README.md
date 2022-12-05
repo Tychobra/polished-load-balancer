@@ -18,5 +18,8 @@ kill open ports
 npx kill-port 8080
 ```
 
+shiny::runApp("../shiny_app")
 
-
+```
+docker stop $(docker ps -q)
+```

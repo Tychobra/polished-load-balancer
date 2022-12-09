@@ -23,3 +23,13 @@ shiny::runApp("../shiny_app")
 ```
 docker stop $(docker ps -q)
 ```
+
+
+
+```terminal
+
+docker build -t polished_proxy_eg .
+
+docker run -p 8080:8080 polished_proxy_eg
+
+```

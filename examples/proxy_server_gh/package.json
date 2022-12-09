@@ -1,0 +1,16 @@
+{
+  "name": "polished-proxy-test",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "polished-proxy": "git+https://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@github.com/tychobra/polished-proxy.git#1b2408c1bd557d1d42a02a72c59fa33239bb2e5e"
+  }
+}

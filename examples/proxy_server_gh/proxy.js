@@ -4,7 +4,7 @@ import polishedProxy from 'polished-proxy'
 const app = express()
 
 const proxyMiddleware = await polishedProxy({
-  appDir: '../shiny_w_polished',
+  appDir: '/srv/shiny_app',
   maxSessions: 2
 })
 

@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.17.1",
-    "polished-proxy": "git+https://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@github.com/tychobra/polished-proxy.git#1b2408c1bd557d1d42a02a72c59fa33239bb2e5e"
+    "polished-proxy": "git+https://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@github.com/tychobra/polished-proxy.git#059e50d2e54ca6edb15c5e7cc615d51d11cc39c6"
   }
 }

@@ -3,5 +3,10 @@
     "Package": "shiny",
     "Repository": "CRAN",
     "Version": "1.7.3"
+  },
+  "DT": {
+    "Package": "DT",
+    "Repository": "CRAN",
+    "Version": "0.26"
   }
 }

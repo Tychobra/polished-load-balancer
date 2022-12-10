@@ -3,11 +3,12 @@ import polishedProxy from 'polished-proxy'
 
 const app = express()
 
-const proxyMiddleware = await polishedProxy({
+const proxy = await polishedProxy({
   appDir: '/srv/shiny_app',
   maxSessions: 2
 })
 
-app.use(proxyMiddleware)
+
+app.use(proxy.middleware)
 
 app.listen(8080)

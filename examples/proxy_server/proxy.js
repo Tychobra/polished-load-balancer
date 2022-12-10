@@ -28,12 +28,23 @@ app.get("/polished-proxy", (req, res) => {
   }
 
   const out_html = out.map(obj => {
-    return `<div style="padding: 15px; border: 1px solid #EEE;">
-      <ul style="list-style-type: none;">
-        <li>Instance ID: ${obj.instance_id}</li>
-        <li>Active Sessions: ${obj.nActiveSessions}</li>
-        <li>Total Sessions: ${obj.nTotalSessions}</li>
-      </ul>
+    return `<div style="background-color: F5F5F5; padding: 15px; border: 1px solid #000;">
+      <table style="width: 100%;">
+        <tbody>
+          <tr>
+            <td style="width: 50%; padding: 5px; border-bottom: 1px solid #BBB; border-top: 1px solid #BBB;">Instance ID</td>
+            <td style="text-align: right; width: 50%; padding: 5px; border-bottom: 1px solid #BBB; border-top: 1px solid #BBB;">${obj.instance_id}</td>
+          </tr>
+          <tr>
+            <td style="width: 50%; padding: 5px; border-bottom: 1px solid #BBB;">Active Sessions</td>
+            <td style="text-align: right; width: 50%; padding: 5px; border-bottom: 1px solid #BBB;">${obj.nActiveSessions}</td>
+          </tr>
+          <tr>
+            <td style="width: 50%; padding: 5px; border-bottom: 1px solid #BBB;">Total Sessions</td>
+            <td style="text-align: right; width: 50%; padding: 5px; border-bottom: 1px solid #BBB;">${obj.nTotalSessions}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>`
   })
   res.send(`<html>
@@ -43,7 +54,9 @@ app.get("/polished-proxy", (req, res) => {
       <h3>Active Users: ${total_active_users}</h3>
       <h3>Inactive Users: ${total_total_users - total_active_users}</h3>
       <h3>Total Users: ${total_total_users}</h3>
-      ${out_html}
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        ${out_html}
+      </div>
     </body>
   </html>`)
 })

@@ -16,8 +16,8 @@ RUN R -e 'install.packages("remotes")'
 # Copy app into shiny server `shiny_app` directory
 COPY 'shiny_app/deps.json' '/srv/deps.json'
 
-RUN R -e 'remotes::install_github("tychobra/polisheddeploy", auth_token="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", ref="7008435e9b647fefba623b29daa28f7b2f4f6fb1")'
-RUN R -e 'polisheddeploy::install_packages("/srv/deps.json", auth_token = NULL, Ncpus=4)'
+RUN R -e 'remotes::install_github("tychobra/polisheddeploy", ref="7008435e9b647fefba623b29daa28f7b2f4f6fb1")'
+RUN R -e 'polisheddeploy::install_packages("/srv/deps.json", Ncpus=4)'
 
 COPY 'shiny_app' /srv/shiny_app
 

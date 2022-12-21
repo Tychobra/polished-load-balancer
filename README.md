@@ -7,38 +7,29 @@
 
 ## Simple example
 
-The following example will serve two Shiny apps located in the `/srv/shiny_app` folders:
+The following example will serve a Shiny apps located in the `/srv/shiny_app` folder:
 
 ``` javascript
-
 import express from 'express';
-import polishedProxy from 'shiny-proxy';
+import polishedProxy from 'polished-proxy';
 
-const holdProxy = polishedProxy({
+const holdProxy = await polishedProxy({
   appDir: "/srv/shiny_app",
   maxSessions: 1
 })
 
-const app = express();
+const app = express()
 
-app.use(holdProxy);
+app.use(holdProxy.middleware)
 
-app.listen(8080);
-
+app.listen(8080)
 ```
 
 ## Options
 
-A `polished-proxy` is created with `polishedProxy(options)`. This section described available options.
+A `polished-proxy` is created with `polishedProxy(options)`. `options` is an object with
+the following properties.
 
-#### Main settings
+* **appDir:** string: the path of the folder containing the Shiny app.
 
-* **options.redirect404:** the path to redirect "page not found" errors to (by default, `/404`).
-
-* **options.redirect500:** the path to redirect "internal server errors" to (by default, `/500`). On error, `polished-proxy` will try to launch new instance of your apps.
-
-#### Apps settings
-
-* **options.appDir:** the path of the folder containing the Shiny app.
-
-* **options.maxSessions** the max number of connections per worker before starting up a new worker.
+* **maxSessions** integer: the max number of connections per worker before starting up a new worker.

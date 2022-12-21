@@ -1,13 +1,16 @@
 import express from 'express'
-import polishedProxy from 'polished-proxy'
+import polishedProxy, { dashboard } from 'polished-proxy'
 
 const app = express()
 
 const proxy = await polishedProxy({
-  appDir: '/srv/shiny_app',
+  appDir: '../shiny_w_polished',
   maxSessions: 2
 })
 
+app.get("/polished-proxy", (req, res) => {
+  dashboard(req, res, proxy.shinyApp)
+})
 
 app.use(proxy.middleware)
 

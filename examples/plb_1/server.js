@@ -11,18 +11,14 @@ const loadBalancer = await polishedLoadBalancer({
 })
 
 
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
 
 app.get("/polished-proxy", (req, res) => {
   
   // TODO: could check that user is an admin here
 
-  const dat = get_sessions_data(shinyApps)
-  console.log("dat: ", dat)
+  const dat = get_sessions_data(shinyApps)  
+
   res.send(dashboard_ui(dat))
-  
 })
 
 app.use(loadBalancer)

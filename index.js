@@ -1,5 +1,5 @@
 
-import plb, { shinyApps } from './lib/proxy.js'
+import plb, { shinyApps } from './lib/loadBalancer.js'
 import get_sessions_data from './lib/analytics.js'
 
 

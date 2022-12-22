@@ -22,7 +22,7 @@ const app_box = (obj) => {
 }
 
 
-const content = (dat) => {
+const dashboard_ui = (dat) => {
   
   return `<!DOCTYPE html>
     <html lang="en">
@@ -44,5 +44,5 @@ const content = (dat) => {
   </html>`
 }
 
-export default content
+export default dashboard_ui
 

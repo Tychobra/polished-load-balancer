@@ -1,7 +1,7 @@
 import express from 'express'
 import polishedLoadBalancer, { shinyApps, get_sessions_data } from '../../index.js'
 
-import content from "./dashboard.js"
+import dashboard_ui from "./dashboard/index.js"
 
 const app = express()
 
@@ -21,7 +21,7 @@ app.get("/polished-proxy", (req, res) => {
 
   const dat = get_sessions_data(shinyApps)
   console.log("dat: ", dat)
-  res.send(content(dat))
+  res.send(dashboard_ui(dat))
   
 })
 

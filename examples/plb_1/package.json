@@ -1,15 +1,16 @@
 {
-  "name": "polished-proxy-test",
+  "name": "plb-example-1",
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "proxy.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "html-express-js": "^1.1.1"
   }
 }

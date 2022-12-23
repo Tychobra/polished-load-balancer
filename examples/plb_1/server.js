@@ -12,7 +12,7 @@ const loadBalancer = await polishedLoadBalancer({
 
 
 
-app.get("/polished-proxy", (req, res) => {
+app.get("/__polished__", (req, res) => {
   
   // TODO: could check that user is an admin here
 

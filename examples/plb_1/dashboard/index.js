@@ -29,8 +29,11 @@ const requests_table = (requests) => {
   </table>`
 }
 
-const app_box = (obj) => {
-  return `<div style="background-color: #F5F5F5; padding: 15px; border: 1px solid #000; margin: 15px 0;">
+const app_box = (obj, i) => {
+  return `<div style="background-color: #FFF; padding: 15px; box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);; margin: 15px 0; min-width: 500px; border-radius: 5px;">
+    <div style="text-align: center;">
+      <h3>App Instance ${i + 1}</h3>
+    </div>
     <table style="width: 100%;">
       <tbody>
         <tr>
@@ -69,6 +72,11 @@ const dashboard_ui = (dat) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Polished Load Balancer</title>
       <style>
+        body {
+          font-family: Verdana, sans-serif;
+          background-color: #F4F4F4;
+        }
+
         .cell_ {
           width: 50%; 
           padding: 5px; 
@@ -77,14 +85,26 @@ const dashboard_ui = (dat) => {
       </style>
     </head>
     <body>
-      <h1>Polished Load Balancer</h1>
-      <h3>Active Sessions: ${ dat.totals.active }</h3>
-      <h3>Inactive Sessions: ${ dat.totals.inactive }</h3>
-      <h3>Total Sessions</h3>
-      
-      ${dat.apps.map(app_obj => {
-        return app_box(app_obj)
-      }).join("")}
+      <div style="text-align: center;">
+        <h1>Polished Load Balancer</h1>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+        <div style="text-align: center;">
+          <h2># Sessions</h2>
+          <h3>Active: ${ dat.totals.active }</h3>
+          <h3>Inactive: ${ dat.totals.inactive }</h3>
+          <h3>Total: ${ dat.totals.active + dat.totals.inactive}</h3>
+        </div>
+        <div style="text-align: center;">
+          <h2># App Instances</h2>
+            <h3>${ dat.apps.length }</h3>
+          </div>
+        </div>  
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          ${dat.apps.map((app_obj, i) => {
+            return app_box(app_obj, i)
+          }).join("")}
+        </div>
     </body>
   </html>`
 }

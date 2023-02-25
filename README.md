@@ -21,7 +21,7 @@ const plb = await polishedLoadBalancer({
 
 const app = express()
 
-app.use(plb.middleware)
+app.use(plb)
 
 app.listen(8080)
 ```

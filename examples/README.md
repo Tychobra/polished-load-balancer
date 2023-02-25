@@ -1,35 +1,21 @@
 
 
-# Polished Proxy Installation
+# Polished Load Balancer Installation
 ```terminal
-cd examples/shiny_min/proxy_server
+cd examples/plb_1
 npm install
 ```
 
-# Run Polished Proxy
+# Run Polished Load Balancer
 
 ```terminal
-node ./proxy.js
+node ./server.js
 ```
+
+### Helper commands for development
 
 kill open ports
 
 ```terminal
 npx kill-port 8080
-```
-
-shiny::runApp("../shiny_app")
-
-```
-docker stop $(docker ps -q)
-```
-
-
-
-```terminal
-
-docker build -t polished_proxy_eg .
-
-docker run -p 8080:8080 polished_proxy_eg
-
 ```

@@ -3,11 +3,11 @@ import polishedLoadBalancer from 'polished-load-balancer'
 
 const app = express()
 
-const loadBalancer = await polishedLoadBalancer({
+const plb = await polishedLoadBalancer({
   appDir: '../shiny_w_polished',
   maxSessions: 2
 })
 
-app.use(loadBalancer)
+app.use(plb)
 
 app.listen(8080)

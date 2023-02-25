@@ -5,11 +5,10 @@ import dashboard_ui from "./dashboard/index.js"
 
 const app = express()
 
-const loadBalancer = await polishedLoadBalancer({
+const plb = await polishedLoadBalancer({
   appDir: '../shiny_w_polished',
   maxSessions: 2
 })
-
 
 
 app.get("/__polished__", (req, res) => {
@@ -21,6 +20,6 @@ app.get("/__polished__", (req, res) => {
   res.send(dashboard_ui(dat))
 })
 
-app.use(loadBalancer)
+app.use(plb)
 
 app.listen(8080)

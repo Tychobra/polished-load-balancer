@@ -28,13 +28,19 @@ app.listen(8080)
 
 ## Options
 
-The load balancer middlemare is created by `polishedLoadBalancer(options)`. `options` is an object with
-the following configurable properties.
+The load balancer middleware is created by `polishedLoadBalancer(options)`. `options` is an object with
+the following configurable properties:
 
-* **appDir:** string: the path of the folder containing the Shiny app. 
+* **appDir:** string - the path of the folder containing the Shiny app. 
 
-* **maxSessions** integer > 0: the max number of sessions per Shiny app instance before starting up a new Shiny app instance.  New Shiny app instances are automatically scaled up and down as each running Shiny app reaches this maxSessions number of sessions.
+* **maxSessions:** integer > 0 - the max number of active sessions per Shiny app instance before starting up a new Shiny app instance.  New Shiny app instances are automatically scaled up and down as each running Shiny app reaches this maxSessions number of sessions.
+
+## Usage Dashboard
+
+A simple dashboard with information on your running instanes is available at `/__polished__`
+
+![Screen Shot 2023-02-25 at 12 42 40 PM](https://user-images.githubusercontent.com/4030554/221371574-2f74ec6f-673c-4044-b93e-f27ab947ed83.png)
 
 ## Prior Work
 
-This library was adapted from [node-shiny-proxy](https://github.com/martinv13/node-shiny-proxy) by Martin Vergier
+This package was adapted from [node-shiny-proxy](https://github.com/martinv13/node-shiny-proxy) by Martin Vergier

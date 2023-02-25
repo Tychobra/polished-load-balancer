@@ -3,16 +3,16 @@
 `polished-load-balancer` is a simple load balancer for a single Shiny app. 
 
 * it runs several instances of your Shiny app to overcome the single-process limitation of a standard shiny app
-* new Shiny app instances are automatically started and stopped as to your Shiny app scales up and down
-* it is a middleware for a Node.js [Express](https://expressjs.com) application, so it can be extended easily
+* new Shiny app instances are automatically started and stopped as your app experiences more and less traffic
+* it is a middleware for a Node.js [Express](https://expressjs.com) application, so it can be easily extended
 
-## Simple example
+## Simple Example
 
-The following example will serve a Shiny apps located in the `/srv/shiny_app` folder:
+The following example will serve a Shiny app located in the `/srv/shiny_app` folder:
 
 ``` javascript
-import express from 'express';
-import polishedLoadBalancer from 'polished-load-balancer';
+import express from 'express'
+import polishedLoadBalancer from 'polished-load-balancer'
 
 const plb = await polishedLoadBalancer({
   appDir: "/srv/shiny_app",
@@ -33,7 +33,7 @@ the following configurable properties.
 
 * **appDir:** string: the path of the folder containing the Shiny app. 
 
-* **maxSessions** integer > 0: the max number of connections per worker before starting up a new Shiny app instance.  New Shiny app instances are automatically scaled up and down as each running Shiny app reached this maxSessions number of active sessions.
+* **maxSessions** integer > 0: the max number of sessions per Shiny app instance before starting up a new Shiny app instance.  New Shiny app instances are automatically scaled up and down as each running Shiny app reaches this maxSessions number of sessions.
 
 ## Prior Work
 

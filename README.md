@@ -6,6 +6,12 @@
 * new Shiny app instances are automatically started and stopped as your app experiences more and less traffic
 * it is a middleware for a Node.js [Express](https://expressjs.com) application, so it can be easily extended
 
+## Installation
+
+```terminal
+npm install polished-load-balancer
+```
+
 ## Simple Example
 
 The following example will serve a Shiny app located in the `/srv/shiny_app` folder:

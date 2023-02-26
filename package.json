@@ -1,12 +1,12 @@
 {
-  "name": "polished-proxy",
-  "version": "0.1.3",
+  "name": "polished-load-balancer",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tychobra/polished-proxy.git"
+    "url": "https://github.com/tychobra/polished-load-balancer.git"
   },
   "type": "module",
-  "description": "Simple R Shiny apps deployment",
+  "description": "Simple R Shiny app load balancer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
@@ -19,7 +19,5 @@
     "uuid": "^8.3.1"
   },
   "devDependencies": {
-    "docma": "^3.2.2",
-    "jsdoc": "^3.6.6"
   }
 }

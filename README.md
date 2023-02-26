@@ -10,7 +10,8 @@
 
 The following example will serve a Shiny app located in the `/srv/shiny_app` folder:
 
-``` javascript
+```nodejs
+# server.js
 import express from 'express'
 import polishedLoadBalancer from 'polished-load-balancer'
 
@@ -26,15 +27,17 @@ app.use(plb)
 app.listen(8080)
 ```
 
+If you run the above server using `node server.js`, your auto scaling Shiny app will be available at `http://localhost:8080`.
+
 ## Options
 
-The load balancer middlemare is created by `polishedLoadBalancer(options)`. `options` is an object with
-the following configurable properties.
+The load balancer middleware is created by `polishedLoadBalancer(options)`. `options` is an object with
+the following configurable properties:
 
-* **appDir:** string: the path of the folder containing the Shiny app. 
+* **appDir:** string - the path of the folder containing the Shiny app. 
 
-* **maxSessions** integer > 0: the max number of sessions per Shiny app instance before starting up a new Shiny app instance.  New Shiny app instances are automatically scaled up and down as each running Shiny app reaches this maxSessions number of sessions.
+* **maxSessions:** integer > 0 - the max number of active sessions per Shiny app instance before starting up a new Shiny app instance.  New Shiny app instances are automatically scaled up and down as each running Shiny app reaches this maxSessions number of sessions.
 
 ## Prior Work
 
-This library was adapted from [node-shiny-proxy](https://github.com/martinv13/node-shiny-proxy) by Martin Vergier
+This package was adapted from [node-shiny-proxy](https://github.com/martinv13/node-shiny-proxy) by Martin Vergier

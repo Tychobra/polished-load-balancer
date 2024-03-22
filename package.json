@@ -1,6 +1,6 @@
 {
   "name": "polished-load-balancer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/tychobra/polished-load-balancer.git"
@@ -8,9 +8,6 @@
   "type": "module",
   "description": "Simple R Shiny app load balancer",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
-  },
   "author": "Martin Vergier and Andy Merlino",
   "dependencies": {
     "async-lock": "^1.2.4",

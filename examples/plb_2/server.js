@@ -1,5 +1,5 @@
 import express from 'express'
-import polishedLoadBalancer from 'polished-load-balancer'
+import polishedLoadBalancer from '../../index.js'
 
 const app = express()
 

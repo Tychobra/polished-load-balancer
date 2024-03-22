@@ -9,6 +9,7 @@
   "description": "Simple R Shiny app load balancer",
   "main": "index.js",
   "author": "Martin Vergier and Andy Merlino",
+  "license": "MIT",
   "dependencies": {
     "async-lock": "^1.2.4",
     "http-proxy-middleware": "^1.0.6",

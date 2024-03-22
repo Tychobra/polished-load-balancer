@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1",
-    "polished-proxy": "git+https://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@github.com/tychobra/polished-proxy.git#88d4e97f0f6022ac94bb5bf307090b2a0dd97c0a"
+    "express": "4.17.1"
   }
 }

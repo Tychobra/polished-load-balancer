@@ -11,9 +11,9 @@
   "author": "Martin Vergier and Andy Merlino",
   "license": "MIT",
   "dependencies": {
-    "async-lock": "^1.2.4",
-    "http-proxy-middleware": "^1.0.6",
+    "async-lock": "1.2.4",
+    "http-proxy-middleware": "1.0.6",
     "tcp-port-used": "^1.0.1",
-    "uuid": "^8.3.1"
+    "uuid": "8.3.1"
   }
 }
